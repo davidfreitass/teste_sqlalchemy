@@ -17,10 +17,10 @@ class Pessoa(Base):
     email = Column(String)
     endereco = Column(String)
 
+
 Base.metadata.create_all(engine)
 
-p1 = Pessoa(nome='David', idade='22', email='david@gmail.com', endereco='Rua A 78, Bahia, Brasil')
-p2 = Pessoa(nome='Raquel', idade='19', email='raquel@google.com', endereco='Rua B 14, Bahia, Brasil')
+p5 = Pessoa(nome="Vovô", idade=82, endereco="Rua C 12, Bahia, Brasil")
 
-session.add_all([p1, p2])
+session.add(p5)
 session.commit()
